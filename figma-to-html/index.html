@@ -10,18 +10,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    
 </head>
   <body>
     <!-- top bar -->
     <section class="top-bar py-1 ">
         <div class="container container-max-width">
             <div class="row align-items-center">
-              <div class="col-md-6">
+              <div class="col-md-6 topBartxt">
                 Avenzur will deliver fast with safe packing in all over the country
               </div>
-              <div class="col-md-6 d-flex justify-content-end ">
+              <div class="col-md-6 d-flex justify-content-end topbarBtns">
                 <div class="dropdown me-2">
-                    <a class="btn  dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="btn  dropdown-toggle text-white moblang" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-globe-americas me-1"></i> EN <i class="bi bi-chevron-down ms-2"></i>
                     </a>
                   
@@ -58,10 +59,18 @@
         <div class="row  align-items-center justify-content-between py-3">
 
           <div class="col-md-2  mb-2">
-            <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="logo"></a>
+            <div class="logosearchMob">
+
+              <div> <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="logo"></a></div>
+            <div id="searchtoggle"><i class="bi bi-search"></i></div>
+            </div>
+           
+             
+
           </div>
-          <div class="col-md-7">
-            <form class="d-flex search-bar" role="search">
+          <div class="col-md-7" id="searchbarmob">
+            <div id="searchtogglecros"><i class="bi bi-x-circle-fill"></i></div>
+            <form class="d-flex search-bar" role="search" >
               
             <select class="form-select w-auto bg-transparent border-0 ps-4 categorySelect" aria-label="Default select">
               <option selected>Category</option>
@@ -73,8 +82,8 @@
               <button class="btn searchsubmitBtn" type="submit"><i class="bi bi-search"></i></button>
             </form>
           </div>
-          <div class="col-md-2 ps-md-0">
-              <div class="d-flex align-items-center">
+          <div class="col-md-2 ps-md-0" id="salemob">
+              <div class="d-flex align-items-center" id="salediv">
                 <h3 class="me-2 my-0">
                   <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M23.1 6.29999C26.4417 6.29999 29.6466 7.62748 32.0096 9.99044C34.3725 12.3534 35.7 15.5583 35.7 18.9" stroke="#2B9B48" stroke-width="2.52" stroke-miterlimit="10" stroke-linecap="square"/>
@@ -144,13 +153,13 @@
             <nav class="navbar navbar-expand-lg  container-max-width">
               <div class="container-fluid">
                 
-                <div class="menu-av ">
+                <div class="menu-av" id="sourcedivmob">
                   
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                  <button id="menuiconMob" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
                       <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                       </li>
@@ -161,7 +170,9 @@
                         <a class="nav-link"  href="#">About</a>
                       </li>
                     
-                     
+                     <div id="mobnav"> 
+
+                     </div>
                      
                     </ul>
                     
@@ -173,7 +184,7 @@
             </nav>
           </div>
           <div class="col-md-4 col-sm-2 shop-icons">
-            <div class="text-end">
+            <div class="text-end" id="shoppingdivMob">
 
               <span class="shuffleIcon me-2">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -461,7 +472,7 @@
             <div class="px-4">
               <div class="skinareaTitle"><h2 class="fw-bold">Beauty starts from inside</h2></div>
               <div class="skinareatext"><p class="m-0 py-2">Discover our specially formulated products that helps you shine from inside out.</p></div>
-              <button type="button" class="btn primary-buttonAV mt-3 py-2 discoverbtn">Discover <i class="bi bi-chevron-right ms-1"></i></button>
+              <button type="button" class="btn primary-buttonAV my-3 py-2 discoverbtn">Discover <i class="bi bi-chevron-right ms-1"></i></button>
             </div>
           </div>
          
@@ -1601,7 +1612,7 @@
 
     <!-- join section -->
 
-    <section class="join-container py-3" >
+    <section class="join-container " >
       <div class="container container-max-width py-5" style="background-image: url('./images/bgbanner.jpg');">
         <div class="text-center">
           <h2>Join our newsletter</h2>
@@ -1669,7 +1680,7 @@
    
   </section>
     <!-- footer end -->
-    
+    <script  src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
