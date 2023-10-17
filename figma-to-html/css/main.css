@@ -3,7 +3,7 @@
 }
 
 :root {
-  --primary-color: #2B9B48; /* Define a variable named --my-color and set its value to a color */
+  --primary-color: #662D91; /* Define a variable named --my-color and set its value to a color */
 }
 
 body {
@@ -69,7 +69,7 @@ section.top-bar {
 }
 .search-bar {
   border-radius: 100px;
-  background: #CBFDD8;
+  background: #DDC3F4;
   overflow: hidden;
 
 }
@@ -90,7 +90,7 @@ section.top-bar {
 
 button.btn.all-categoryBtn {
   border-radius: 32px;
-  background: #cbfdd8;
+  background: #DDC3F4;
   padding: 3px 19px;
   font-size: 15px;
 }
@@ -155,7 +155,7 @@ span.cartIcon {
 /* slider */
 
 section.heroSlider .carousel-item img, section.heroSlider .carousel-inner {
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 
 section.heroSlider .carousel-indicators [data-bs-target] {
@@ -197,14 +197,17 @@ width: 6%;
 }
 
 .feature-cards .cardImg img {
-  width: 100% !important;
+  width: auto !important;
   height: 125px;
   object-fit: contain;
-}
-.feature-cards .card {
-  border-radius: 6px;
+  border-radius: 100px;
   background: #FFF;
   box-shadow: 0px 0px 26px 0px rgba(23, 26, 31, 0.10), 0px 2px 12px 0px rgba(23, 26, 31, 0.10);
+  padding: 3px;
+  
+}
+.feature-cards .card {
+  
   border: none;
 }
 .feature-cards .card-body{
@@ -247,7 +250,7 @@ text-transform: uppercase;
   color: white;
 }
 .skinBannerRow {
-  background: #E4FEEA;
+  /* background: #E4FEEA; */
   width: 100%;
   margin: 0 auto;
 }
@@ -264,7 +267,7 @@ text-transform: uppercase;
 }
 
 .categoryTabs #pills-tab li button {
-  background: #CBFDD8;
+  background: #DDC3F4;
   border-radius: 43px;
   color: #464646 !important;
   font-weight: bold;
@@ -325,7 +328,7 @@ text-transform: uppercase;
 }
 .addtocart {
   padding-block: 10px !important;
-  background: #CBFDD8;
+  background: #DDC3F4;
   font-size: 18px;
 }
 .addtocart:hover{
@@ -350,7 +353,7 @@ text-transform: uppercase;
   margin-right: 6px;
 }
 .footer-container footer {
-  background: #ffffff85;
+  background: #d1d1d1a3;
 }
 button#menuiconMob{
 
@@ -460,7 +463,7 @@ section.heroSlider .carousel-control-next, section.heroSlider .carousel-control-
   padding: 2px 5px;
   border-radius: 5px;
   /* box-shadow: 0px 0px 8px #b3b3b3; */
-  background: #2b9b48;
+  background: var(--primary-color);
   color: white;
   
 }
