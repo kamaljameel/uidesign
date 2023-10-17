@@ -175,7 +175,7 @@ section.heroSlider span.carousel-control-prev-icon{
   background-image: url("./images/arrowleft.png");
 }
 section.heroSlider span.carousel-control-next-icon{
-  background-image: url("./images/arrowright.png");
+  background-image: url('./images/arrowright.png');
 }
 section.heroSlider span.carousel-control-prev-icon,
 section.heroSlider span.carousel-control-next-icon {
