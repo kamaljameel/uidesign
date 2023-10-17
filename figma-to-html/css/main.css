@@ -511,6 +511,7 @@ div#searchtoggle {
 #mobnav{
   margin-top: 5px;
 }
+
 div#salediv {
   background: white;
   justify-content: center;
@@ -526,5 +527,8 @@ div#salediv {
 }
 .moblang {
   padding-left: 0;
+}
+.mobficon {
+  display: flex;
 }
 }
