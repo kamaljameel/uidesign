@@ -531,4 +531,7 @@ div#salediv {
 .mobficon {
   display: flex;
 }
+.search-bar {
+  width: 100% !important;
+}
 }
