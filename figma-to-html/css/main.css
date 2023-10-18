@@ -179,13 +179,16 @@ section.heroSlider span.carousel-control-next-icon{
 }
 section.heroSlider span.carousel-control-prev-icon,
 section.heroSlider span.carousel-control-next-icon {
-  /* background: white; */
-  color: black;
-  border-radius: 60px;
   
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
+  background: white; 
+  width: 27px;
+  height: 27px;
+  background: black;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
 }
 section.heroSlider .carousel-control-next, 
 section.heroSlider .carousel-control-prev{
@@ -315,7 +318,7 @@ text-transform: uppercase;
 
 .quantity .plus,
 .quantity .minus{
-  color: #078c1c;
+  color:  var(--primary-color);
   font-size: 19px;
 }
 .Qnum {
@@ -366,8 +369,54 @@ span.Qnum {
   color: black;
 }
 /* media queries */
+.slick-slide {
+  margin: 3px;
+}
 
-@media screen and (max-width:600px) {
+.slick-prev:before, .slick-next:before {
+  opacity: 1;
+  display: none !important;
+}
+.slick-prev.slick-disabled, .slick-next.slick-disabled{
+color: rgb(102 45 145 / 54%) !important;
+}
+.slick-prev, .slick-next {
+  font-size: 35px !important;
+  color:  var(--primary-color) !important;
+  background: transparent;
+  width: auto !important;
+  height: auto !important;
+  z-index: 9 !important;
+}
+section.widgets .card-body {
+  padding-inline: 5px;
+}
+
+section.widgets .card {
+  background: #ffeeee;
+  border-radius: 0;
+  border: navajowhite;
+}
+.widget-bar {
+  background: #f1f6f7;
+  padding: 25px 7px 25px 4px;
+}
+/* media */
+@media screen and (min-width:600px) {
+  .slick-prev {
+    left: -35px !important;
+  }
+  .slick-next {
+    right: -38px !important;
+}
+}
+@media screen and (max-width:500px) {
+  .slick-prev {
+    left: 0px !important;
+  }
+  .slick-next {
+    right: 0px !important;
+}
   .container-max-width{
     width: 100% ;
     padding-left: 10px;
@@ -448,7 +497,7 @@ section.heroSlider .carousel-control-next, section.heroSlider .carousel-control-
   margin: 0;
   margin-left: 0px;
   position: absolute;
-  bottom: 20px;
+  bottom: 0px;
   right: 0;
   margin-left: auto;
 }
@@ -536,5 +585,9 @@ div#salediv {
 }
 .search-bar {
   width: 100% !important;
+}
+.arowbtn {
+  display: flex;
+  align-items: center;
 }
 }
