@@ -402,6 +402,16 @@ section.widgets .card {
   padding: 25px 7px 25px 4px;
 }
 /* media */
+@media only screen and (max-width: 768px) and (min-width:600px){
+  .feature-cards .cardImg img{
+    width: 100% !important;
+    height: auto;
+  }
+  .feature-cards .card-body{
+    padding-inline: 0;
+  }
+ 
+}
 @media screen and (min-width:600px) {
   .slick-prev {
     left: -35px !important;
@@ -590,4 +600,12 @@ div#salediv {
   display: flex;
   align-items: center;
 }
+.boom-product-cat img {
+  height: 250px;
+  object-fit: contain;
+}
+.boomsale {
+  padding: 0 39px 33px 0;
+}
+
 }
