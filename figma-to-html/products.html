@@ -14,7 +14,8 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <!-- Add the slick-theme.css if you want default styling -->
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
   <body>
     <!-- top bar -->
@@ -49,7 +50,34 @@
                       
                     </ul>
                 </div>
-                  <button type="button" class="btn text-white px-0"><i class="bi bi-person-fill"></i>&nbsp; My Account</button>
+                  
+                  <div class="dropdown">
+                    <button type="button" class="btn text-white dropdown-toggle px-0 border-0" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                      <i class="bi bi-person-fill"></i>&nbsp; My Account
+                    </button>
+                    <form class="dropdown-menu p-3 myaccountForm" >
+                      <div class="mb-3">
+                       
+                        <label for="exampleDropdownFormEmail2" class="form-label">Username/Email</label>
+                        <a href="#" class="float-end text-decoration-none text-dark">Register</a>
+                        <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+                        <a href="#" class="float-end text-decoration-none text-dark">Forgot?</a>
+                        <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+                      </div>
+                      <div class="mb-3">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="dropdownCheck2">
+                          <label class="form-check-label" for="dropdownCheck2">
+                            Remember me
+                          </label>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn primary-buttonAV w-100 rounded-1 pb-2">Login</button>
+                    </form>
+                  </div>
               </div>
               
             </div>
@@ -82,9 +110,11 @@
               <option value="Skin Care">Skin Care</option>
               <option value="Suppliments">Suppliments</option>
             </select>
-              <input class="form-control border-0 bg-transparent py-3" type="search" placeholder="What are you looking for?" aria-label="Search">
+              <input  id="search" class="form-control border-0 bg-transparent py-3" type="search" placeholder="What are you looking for?" aria-label="Search">
               <button class="btn searchsubmitBtn" type="submit"><i class="bi bi-search"></i></button>
+              
             </form>
+            
           </div>
           <div class="col-lg-2 col-md-1 ps-md-0" id="salemob">
               <!-- <div class="d-flex align-items-center" id="salediv">
@@ -115,13 +145,13 @@
       <div class="container container-max-width main-menuTab">
         <div class="row align-items-center">
           <div class="col-md-2 col-sm-2 mob-catS">
-            <button class="btn all-categoryBtn d-flex align-items-center justify-content-between" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <button class="btn all-categoryBtn d-flex align-items-center justify-content-between" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCategories" aria-controls="offcanvasCategories">
               <i class="bi bi-filter-left "></i> All Category
             </button>
             
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasCategories" aria-labelledby="offcanvasCategoriesLabel">
               <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Categories</h5>
+                <h5 class="offcanvas-title" id="offcanvasCategoriesLabel">Categories</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div class="offcanvas-body">           
@@ -208,10 +238,59 @@
             </span>
             
               <span class="cartIcon">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9.33331 24C7.86665 24 6.67998 25.2 6.67998 26.6667C6.67998 28.1333 7.86665 29.3333 9.33331 29.3333C10.8 29.3333 12 28.1333 12 26.6667C12 25.2 10.8 24 9.33331 24ZM22.6666 24C21.2 24 20.0133 25.2 20.0133 26.6667C20.0133 28.1333 21.2 29.3333 22.6666 29.3333C24.1333 29.3333 25.3333 28.1333 25.3333 26.6667C25.3333 25.2 24.1333 24 22.6666 24ZM20.7333 17.3333C21.7333 17.3333 22.6133 16.7867 23.0666 15.96L27.84 7.30666C27.9523 7.10456 28.01 6.87662 28.0072 6.6454C28.0045 6.41418 27.9414 6.18769 27.8242 5.98834C27.707 5.78899 27.5398 5.6237 27.3391 5.50881C27.1384 5.39393 26.9112 5.33344 26.68 5.33332L6.94665 5.33332L5.69331 2.66666L1.33331 2.66666L1.33331 5.33332H3.99998L8.79998 15.4533L6.99998 18.7067C6.02665 20.4933 7.30665 22.6667 9.33331 22.6667L25.3333 22.6667V20L9.33331 20L10.8 17.3333L20.7333 17.3333ZM8.21331 7.99999L24.4133 7.99999L20.7333 14.6667L11.3733 14.6667L8.21331 7.99999Z" fill="#171A1F"/>
-              </svg>
-              <span class="quantitynum">1</span>
+             
+              <span class="dropdown">
+               
+                <a class="btn  dropdown-toggle border-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.33331 24C7.86665 24 6.67998 25.2 6.67998 26.6667C6.67998 28.1333 7.86665 29.3333 9.33331 29.3333C10.8 29.3333 12 28.1333 12 26.6667C12 25.2 10.8 24 9.33331 24ZM22.6666 24C21.2 24 20.0133 25.2 20.0133 26.6667C20.0133 28.1333 21.2 29.3333 22.6666 29.3333C24.1333 29.3333 25.3333 28.1333 25.3333 26.6667C25.3333 25.2 24.1333 24 22.6666 24ZM20.7333 17.3333C21.7333 17.3333 22.6133 16.7867 23.0666 15.96L27.84 7.30666C27.9523 7.10456 28.01 6.87662 28.0072 6.6454C28.0045 6.41418 27.9414 6.18769 27.8242 5.98834C27.707 5.78899 27.5398 5.6237 27.3391 5.50881C27.1384 5.39393 26.9112 5.33344 26.68 5.33332L6.94665 5.33332L5.69331 2.66666L1.33331 2.66666L1.33331 5.33332H3.99998L8.79998 15.4533L6.99998 18.7067C6.02665 20.4933 7.30665 22.6667 9.33331 22.6667L25.3333 22.6667V20L9.33331 20L10.8 17.3333L20.7333 17.3333ZM8.21331 7.99999L24.4133 7.99999L20.7333 14.6667L11.3733 14.6667L8.21331 7.99999Z" fill="#171A1F"/>
+                  </svg>
+                  <span class="quantitynum">1</span>
+                </a>
+                <div class=" dropdown-menu p-3 myaccountForm cartform">
+                <table class="table ">
+                  <thead>
+                      <tr>
+                          <th>Image</th>
+                          <th>Name</th>
+                          <th>Price</th>
+                         
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><img src="product1.jpg" alt="Product 1" class="img-thumbnail" style="max-width: 100px;"></td>
+                          <td>Product Name 1</td>
+                          <td class="fw-bold">$19.99</td>
+                        
+                      </tr>
+                     
+                      <!-- Add more product rows here as needed -->
+                  </tbody>
+                  <tfoot>
+                      <tr>
+                        <td colspan="2">Total item</td>
+                       
+                        <td class="text-end fw-bold">1</td>
+                      </tr>
+                      <tr>
+                        <td >Total </td>
+                       
+                        <td colspan="2" class="text-end fw-bold">200 SAR</td>
+                      </tr>
+                       
+                     
+                  </tfoot>
+                
+              </table>
+              <div class="d-flex">
+              <button type="submit" class="btn primary-buttonAV w-100 rounded-1 pb-2 me-2">View Cart</button>
+              <button type="submit" class="btn primary-buttonAV w-100 rounded-1 pb-2 ms-2">Checkout</button>
+            </div>
+            </div>
+              
+                
+              </span>
             </span>
               
             </div>
@@ -586,7 +665,7 @@
       <!-- footer end -->
       
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      
       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
       <script  src="./js/main.js"></script>
     </body>

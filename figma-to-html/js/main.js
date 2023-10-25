@@ -285,6 +285,7 @@ $(document).ready(function(){
                 $(".qty").val(parseInt(now)+1);
             }
         });
+        
 });
 
 const productImages = document.querySelectorAll('.productzoomImg img');
@@ -324,4 +325,50 @@ function zoomMove(e, image) {
 
   image.style.transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
 }
+
+
+
+//auto complete
+// $(document).ready(function() {
+ 
+//   const searchInput = $("#search");
+//   const suggestionList = $("#suggestion-list");
+
+//   // Define your search suggestions.
+//   const availableTags = ["Apple","Apple","Apple", "Banana", "Cherry", "Date", "Elderberry"];
+  
+//   // Attach the autocomplete to the search input.
+//   searchInput.autocomplete({
+//       source: availableTags,
+//       select: function (event, ui) {
+//           searchInput.val(ui.item.value);
+//           // You can perform a search or other actions here when a suggestion is selected.
+//       }
+//   });
+
+//   // Display a list of suggestions.
+//   availableTags.forEach(function(suggestion) {
+    
+//       const listItem = $("<li>").text(suggestion);
+//       suggestionList.append(listItem);
+//   });
+
+// });
+
+$(function() {
+  const searchInput = $("#search");
+
+  // Define your search suggestions.
+  const availableTags = ["Panadol", "supliment", "Anesthesia contact lenses", "Desprine", "Medical"];
+
+  // Attach the autocomplete to the search input.
+  searchInput.autocomplete({
+      source: availableTags,
+      minLength: 1, // Show suggestions after typing at least one character
+      select: function (event, ui) {
+          // You can perform a search or other actions here when a suggestion is selected.
+      }
+  });
+});
+
 
