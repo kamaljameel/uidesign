@@ -86,6 +86,44 @@ $(document).ready(function(){
       // instead of a settings object
     ]
   })
+  $('.related_products').slick({
+   
+    infinite: false,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    margin: 10,
+    prevArrow:"<button type='button' class='slick-prev pull-left'><i class='bi bi-arrow-left-square-fill'></i></button>",
+    nextArrow:"<button type='button' class='slick-next pull-right'><i class='bi bi-arrow-right-square-fill'></i></button>",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 770,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  })
   $('.special_products').slick({
    
     infinite: false,
@@ -164,6 +202,7 @@ $(document).ready(function(){
       // instead of a settings object
     ]
   })
+  
    });
 
    $(document).ready(function() {
@@ -192,7 +231,7 @@ $(document).ready(function(){
             smartSpeed: 200,
             slideSpeed: 500,
             slideBy: slidesPerPage, 
-          navText: ['<svg width="18px" height="18px" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="25px" height="25px" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
+          navText: ['<i class="bi bi-arrow-left-square-fill"></i>', '<i class="bi bi-arrow-right-square-fill"></i>'],
             responsiveRefreshRate: 100
         }).on('changed.owl.carousel', syncPosition2);
     function syncPosition(el) {
@@ -285,3 +324,4 @@ function zoomMove(e, image) {
 
   image.style.transformOrigin = `${transformOriginX}% ${transformOriginY}%`;
 }
+
