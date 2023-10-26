@@ -791,6 +791,18 @@ input.qty.Qnum {
     width: 328px;
     right: 15px !important;
 }
+
+.iti.iti--allow-dropdown.iti--separate-dial-code {
+  width: 100%;
+}
+.registerform {
+  background: #ddc3f4;
+  border-radius: 9px;
+}
+.registerform form label {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
 /* media */
 
 @media screen and (max-width: 768px) {

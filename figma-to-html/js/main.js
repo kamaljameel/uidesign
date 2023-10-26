@@ -328,32 +328,6 @@ function zoomMove(e, image) {
 
 
 
-//auto complete
-// $(document).ready(function() {
- 
-//   const searchInput = $("#search");
-//   const suggestionList = $("#suggestion-list");
-
-//   // Define your search suggestions.
-//   const availableTags = ["Apple","Apple","Apple", "Banana", "Cherry", "Date", "Elderberry"];
-  
-//   // Attach the autocomplete to the search input.
-//   searchInput.autocomplete({
-//       source: availableTags,
-//       select: function (event, ui) {
-//           searchInput.val(ui.item.value);
-//           // You can perform a search or other actions here when a suggestion is selected.
-//       }
-//   });
-
-//   // Display a list of suggestions.
-//   availableTags.forEach(function(suggestion) {
-    
-//       const listItem = $("<li>").text(suggestion);
-//       suggestionList.append(listItem);
-//   });
-
-// });
 
 $(function() {
   const searchInput = $("#search");
@@ -372,3 +346,9 @@ $(function() {
 });
 
 
+var input = document.querySelector("#phone");
+window.intlTelInput(input, {
+    separateDialCode: true,
+    excludeCountries: ["in", "il"],
+    preferredCountries: ["ru", "jp", "pk", "no"]
+});
