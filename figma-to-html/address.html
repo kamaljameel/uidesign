@@ -309,9 +309,9 @@
     <div class="container my-4">
        
         <div class="addressbar">
-            <div class="w-100 addtitle"><h5>My Addresses</h5></div>
+            <div class="w-100 addtitle"><h5><i class="bi bi-map-fill me-2"></i> My Addresses</h5></div>
             <div class="px-3 py-2">
-            <div class="py-3"><p class="m-0 fw-semibold">please select address to update</p></div>
+            <div class="py-3"><h6 class="m-0 fw-semibold">please select address to update</h6></div>
             <div class="row" id="addressList">
                 <!-- Addresses will be added here -->
             </div>
@@ -371,35 +371,31 @@
                     </div>  
                     
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="stateInput" class="form-label">State:</label>
-                                <input type="text" id="stateInput" class="form-control">
-                            </div>
-                            <div class="col-md-6">
+                        <div class="col-md-6">                  
                                 <div class="mb-3">
                                     <label for="postalCodeInput" class="form-label">Postal Code:</label>
                                     <input type="text" id="postalCodeInput" class="form-control">
                                 </div>
-                            </div>
+                        </div>
 
+                        <div class="col-md-6"> 
+                            <div class="mb-3">
+                                <label for="countryInput" class="form-label">Country:</label>
+                                <input type="text" id="countryInput" class="form-control">
+                            </div>
                         </div>
                     </div>        
                        
 
                     <div class="row">
-                        <div class="col-md-6">
+                            
+                        <div class="col-md-12">
                             <div class="mb-3">
-                                <label for="countryInput" class="form-label">Country:</label>
-                                <input type="text" id="countryInput" class="form-control">
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mb-3">
-                                    <label for="phoneInput" class="form-label">Phone:</label>
-                                    <input type="text" id="phoneInput" class="form-control">
-                                </div>
+                                <label for="phoneInput" class="form-label">Phone:</label>
+                                <input type="text" id="phoneInput" class="form-control">
                             </div>
                         </div>
+                       
                     </div>   
                        
                     </form>
@@ -423,34 +419,68 @@
                 <div class="modal-body">
                     <!-- Address input form for editing in the modal -->
                     <form id="editAddressForm">
-                        <div class="mb-3">
-                            <label for="editLine1Input" class="form-label">Line 1:</label>
-                            <input type="text" id="editLine1Input" class="form-control" required>
+                        <div class="row">                            
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label for="editLine1Input" class="form-label">Line 1:</label>
+                                    <input type="text" id="editLine1Input" class="form-control" required>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="editLine2Input" class="form-label">Line 2:</label>
-                            <input type="text" id="editLine2Input" class="form-control">
+                        
+                        
+                        <div class="row">
+                            
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label for="editLine2Input" class="form-label">Line 2:</label>
+                                    <input type="text" id="editLine2Input" class="form-control">
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="editCityInput" class="form-label">City:</label>
-                            <input type="text" id="editCityInput" class="form-control" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="editStateInput" class="form-label">State:</label>
-                            <input type="text" id="editStateInput" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label for="editPostalCodeInput" class="form-label">Postal Code:</label>
-                            <input type="text" id="editPostalCodeInput" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label for="editCountryInput" class="form-label">Country:</label>
-                            <input type="text" id="editCountryInput" class="form-control">
-                        </div>
-                        <div class="mb-3">
-                            <label for="editPhoneInput" class="form-label">Phone:</label>
-                            <input type="text" id="editPhoneInput" class="form-control">
-                        </div>
+                        
+                        <div class="row">
+                            
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editCityInput" class="form-label">City:</label>
+                                    <input type="text" id="editCityInput" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editStateInput" class="form-label">State:</label>
+                                    <input type="text" id="editStateInput" class="form-control">
+                                </div>
+                            </div>
+                        </div>        
+                        
+
+                        <div class="row">
+                            
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editPostalCodeInput" class="form-label">Postal Code:</label>
+                                    <input type="text" id="editPostalCodeInput" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="editCountryInput" class="form-label">Country:</label>
+                                    <input type="text" id="editCountryInput" class="form-control">
+                                </div>
+                            </div>
+
+                        </div>        
+                        <div class="row">
+                            
+                            <div class="col-md-12">
+                                <div class="mb-3">
+                                    <label for="editPhoneInput" class="form-label">Phone:</label>
+                                    <input type="text" id="editPhoneInput" class="form-control">
+                                </div>
+                            </div>
+                        </div>        
                     </form>
                 </div>
                 <div class="modal-footer">

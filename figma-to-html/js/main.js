@@ -368,6 +368,7 @@ $(function() {
 
                 // Create a card for the new address
                 var addressCard = `
+                
                 <div class="col-md-6 mb-4" id="${addressId}">
                     <div class="card">
                         <div class="card-body">
