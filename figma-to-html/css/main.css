@@ -814,6 +814,16 @@ input.qty.Qnum {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+
+.loggedin div {
+  margin: 4px 0px;
+  background: #ddc3f4;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+.loggedin {
+  padding: 4px 6px !important;
+}
 /* media */
 
 @media screen and (max-width: 768px) {
@@ -835,7 +845,10 @@ input.qty.Qnum {
  
 }
 @media screen and (min-width:600px) {
-  
+  .loginPage .registerform {
+    max-width: 450px;
+    margin-inline: auto;
+  }
   .slick-prev {
     left: -35px !important;
   }
